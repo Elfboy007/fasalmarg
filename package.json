@@ -1,0 +1,23 @@
+{
+  "name": "fasalmarg-agritech-platform",
+  "version": "1.0.0",
+  "description": "FASALMARG — A Unified Credit-to-Market Platform for Farmers. From Farm to Fair Deal.",
+  "main": "index.html",
+  "scripts": {
+    "build": "python build.py",
+    "dev": "python -m http.server 8080",
+    "start": "python -m http.server 8080",
+    "serve:dist": "python -m http.server 8080 --directory dist"
+  },
+  "keywords": [
+    "agriculture",
+    "fintech",
+    "farmers",
+    "fpo",
+    "agmarknet",
+    "mandi",
+    "credit-to-market"
+  ],
+  "author": "Fasalmarg Agritech Solutions",
+  "license": "MIT"
+}

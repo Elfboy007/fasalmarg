@@ -1,0 +1,20 @@
+# OS Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+
+# IDE / System
+.vscode/
+.idea/
+.system_generated/
+*.log
+
+# Node (if used)
+node_modules/
+npm-debug.log*

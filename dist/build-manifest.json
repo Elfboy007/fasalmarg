@@ -1,0 +1,102 @@
+{
+  "buildTimestamp": "2026-09-06T20:43:34.568970+00:00",
+  "platform": "FASALMARG Agricultural Platform",
+  "version": "1.0.0",
+  "artifacts": {
+    "favicon.ico": {
+      "sizeBytes": 4286,
+      "formattedSize": "4.2 KB",
+      "sha256": "9fe14964b2e1"
+    },
+    "favicon.svg": {
+      "sizeBytes": 584,
+      "formattedSize": "584.0 B",
+      "sha256": "e5009c029824"
+    },
+    "index.html": {
+      "sizeBytes": 240787,
+      "formattedSize": "235.1 KB",
+      "sha256": "d96f468d9dd5"
+    },
+    "package.json": {
+      "sizeBytes": 618,
+      "formattedSize": "618.0 B",
+      "sha256": "3427b8f86894"
+    },
+    "assets/hero-banner.jpg": {
+      "sizeBytes": 1082417,
+      "formattedSize": "1.0 MB",
+      "sha256": "33706b426ac2"
+    },
+    "assets/logo.jpg": {
+      "sizeBytes": 447370,
+      "formattedSize": "436.9 KB",
+      "sha256": "04288485f9ba"
+    },
+    "css/bundle.min.css": {
+      "sizeBytes": 40680,
+      "formattedSize": "39.7 KB",
+      "sha256": "90102be321a9"
+    },
+    "css/components.css": {
+      "sizeBytes": 45326,
+      "formattedSize": "44.3 KB",
+      "sha256": "8358e7b52b70"
+    },
+    "css/design-system.css": {
+      "sizeBytes": 7857,
+      "formattedSize": "7.7 KB",
+      "sha256": "9a673f281a9d"
+    },
+    "js/app.js": {
+      "sizeBytes": 64045,
+      "formattedSize": "62.5 KB",
+      "sha256": "db5468f25a96"
+    },
+    "js/bundle.min.js": {
+      "sizeBytes": 155467,
+      "formattedSize": "151.8 KB",
+      "sha256": "077c08dae2e1"
+    },
+    "js/data.js": {
+      "sizeBytes": 23277,
+      "formattedSize": "22.7 KB",
+      "sha256": "7082d040215b"
+    },
+    "js/distress-ai.js": {
+      "sizeBytes": 5710,
+      "formattedSize": "5.6 KB",
+      "sha256": "ee8066986494"
+    },
+    "js/finance.js": {
+      "sizeBytes": 9857,
+      "formattedSize": "9.6 KB",
+      "sha256": "39d5bf13db4f"
+    },
+    "js/gov-dashboard.js": {
+      "sizeBytes": 4124,
+      "formattedSize": "4.0 KB",
+      "sha256": "ada273095cb2"
+    },
+    "js/i18n.js": {
+      "sizeBytes": 43326,
+      "formattedSize": "42.3 KB",
+      "sha256": "869e2867e65e"
+    },
+    "js/kaggle-dataset.js": {
+      "sizeBytes": 14788,
+      "formattedSize": "14.4 KB",
+      "sha256": "65d219a5a2f8"
+    },
+    "js/marketplace.js": {
+      "sizeBytes": 18184,
+      "formattedSize": "17.8 KB",
+      "sha256": "4015ecdb70f0"
+    },
+    "js/voice-assistant.js": {
+      "sizeBytes": 15056,
+      "formattedSize": "14.7 KB",
+      "sha256": "b82b53f5cc8d"
+    }
+  }
+}

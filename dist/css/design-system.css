@@ -1,0 +1,354 @@
+/* ==========================================================================
+   FASALMARG AGRICULTURE-TECH DESIGN SYSTEM
+   "From Farm to Fair Deal"
+   Designed specifically for Indian farmers: Simple, Visual, Tactile, Multilingual
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Agriculture Primary Color Palette */
+  --green-deep: #082816;
+  --green-dark: #0f3d23;
+  --green-primary: #15803d;
+  --green-vibrant: #22c55e;
+  --green-light: #4ade80;
+  --green-soft: #dcfce7;
+  --green-surface: #f0fdf4;
+  --green-glow: rgba(34, 197, 94, 0.25);
+
+  /* Clean Neutrals */
+  --bg-primary: #f7faf7;
+  --bg-card: #ffffff;
+  --bg-card-subtle: #f9fbf9;
+  --border-card: #e2ece3;
+  --border-light: #edf3ed;
+  --text-main: #0d2315;
+  --text-body: #284433;
+  --text-muted: #5e7a69;
+  --text-inverse: #ffffff;
+
+  /* Purposeful Agriculture Accents */
+  --accent-orange: #ea580c;
+  --accent-orange-light: #ffedd5;
+  --accent-blue: #0284c7;
+  --accent-blue-light: #e0f2fe;
+  --accent-purple: #7c3aed;
+  --accent-purple-light: #f3e8ff;
+  --accent-gold: #d97706;
+  --accent-gold-light: #fef3c7;
+
+  /* Functional Status Colors */
+  --status-pending: #f59e0b;
+  --status-success: #16a34a;
+  --status-info: #0284c7;
+  --status-danger: #dc2626;
+
+  /* Typography */
+  --font-heading: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Border Radii (Generous & Soft) */
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --radius-pill: 9999px;
+
+  /* Tactile Shadows */
+  --shadow-sm: 0 2px 6px rgba(15, 61, 35, 0.05);
+  --shadow-md: 0 6px 18px rgba(15, 61, 35, 0.07);
+  --shadow-lg: 0 12px 32px rgba(15, 61, 35, 0.1);
+  --shadow-lift: 0 8px 24px rgba(22, 163, 74, 0.18);
+  --shadow-glow: 0 0 24px rgba(34, 197, 94, 0.35);
+
+  /* Touch Target Minimums */
+  --touch-target-min: 48px;
+}
+
+/* Dark Theme Overrides for Night / Low Glare Field Use */
+[data-theme="dark"] {
+  --bg-primary: #07170e;
+  --bg-card: #0d2417;
+  --bg-card-subtle: #112f1f;
+  --border-card: #1b452d;
+  --border-light: #163825;
+  --text-main: #f0fdf4;
+  --text-body: #c7decb;
+  --text-muted: #88aa93;
+  --green-surface: #0a1f14;
+}
+
+/* Reset & Base Setup */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-body);
+  line-height: 1.5;
+  font-size: 16px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  letter-spacing: -0.01em;
+}
+
+/* Mobile-First App Container */
+.app-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Typography Hierarchy */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--text-main);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+/* Large Tactile Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 52px;
+  padding: 0.85rem 1.6rem;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 700;
+  border-radius: var(--radius-lg);
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  user-select: none;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--green-primary), var(--green-vibrant));
+  color: #ffffff;
+  box-shadow: var(--shadow-lift);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #166534, #15803d);
+  box-shadow: var(--shadow-glow);
+}
+
+.btn-dark {
+  background: var(--green-dark);
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background: var(--green-deep);
+}
+
+.btn-secondary {
+  background: #ffffff;
+  color: var(--green-dark);
+  border: 2px solid var(--border-card);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background: var(--green-surface);
+  border-color: var(--green-primary);
+}
+
+.btn-orange {
+  background: linear-gradient(135deg, var(--accent-orange), #f97316);
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.25);
+}
+
+.btn-blue {
+  background: linear-gradient(135deg, var(--accent-blue), #38bdf8);
+  color: #ffffff;
+}
+
+.btn-purple {
+  background: linear-gradient(135deg, var(--accent-purple), #a855f7);
+  color: #ffffff;
+}
+
+.btn-sm {
+  min-height: 40px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  border-radius: var(--radius-md);
+}
+
+.btn-lg {
+  min-height: 60px;
+  padding: 1.1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: var(--radius-xl);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* Rounded Cards */
+.card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-card);
+  padding: 1.35rem;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.card:hover {
+  border-color: rgba(34, 197, 94, 0.4);
+  box-shadow: var(--shadow-lg);
+}
+
+.card-clickable {
+  cursor: pointer;
+}
+
+.card-clickable:active {
+  transform: scale(0.98);
+}
+
+/* Badges & Pills */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  border-radius: var(--radius-pill);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.badge-green {
+  background: var(--green-soft);
+  color: #166534;
+}
+
+.badge-orange {
+  background: var(--accent-orange-light);
+  color: #9a3412;
+}
+
+.badge-blue {
+  background: var(--accent-blue-light);
+  color: #075985;
+}
+
+.badge-purple {
+  background: var(--accent-purple-light);
+  color: #5b21b6;
+}
+
+.badge-gold {
+  background: var(--accent-gold-light);
+  color: #92400e;
+}
+
+/* Status Indicators */
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.status-dot.green {
+  background: var(--green-vibrant);
+  box-shadow: 0 0 8px var(--green-vibrant);
+}
+
+.status-dot.orange {
+  background: var(--accent-orange);
+  box-shadow: 0 0 8px var(--accent-orange);
+}
+
+.status-dot.blue {
+  background: var(--accent-blue);
+  box-shadow: 0 0 8px var(--accent-blue);
+}
+
+/* Grid & Layout Utilities */
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.grid-4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  .grid-mobile-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+
+/* Ticker Bar */
+.ticker-bar {
+  background: var(--green-dark);
+  color: #ffffff;
+  padding: 0.5rem 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.ticker-content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+
+.ticker-content::-webkit-scrollbar {
+  display: none;
+}
+
+.ticker-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.2rem 0.6rem;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+}
+
+.trend-up { color: #4ade80; }
+.trend-down { color: #f87171; }
+.trend-stable { color: #cbd5e1; }
