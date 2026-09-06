@@ -56,6 +56,24 @@ http://localhost:8080
 
 ---
 
+## Build & Deployment (Vercel / Netlify / Cloudflare)
+
+Fasalmarg includes an automated packaging pipeline that minifies CSS, bundles JavaScript, and outputs ready-to-deploy static files:
+
+```bash
+# Build production bundle into public/ (default for Vercel):
+python build.py --output public
+
+# Or run via npm:
+npm run build
+```
+
+- **Vercel**: Preconfigured with `vercel.json`. Set Output Directory to `public` (or leave default).
+- **Netlify**: Set Publish Directory to `public` (or `dist`).
+- **Local Preview**: Run `npm run serve:public` to test the minified bundle.
+
+---
+
 ## Project Structure
 
 ```

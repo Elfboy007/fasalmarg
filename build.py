@@ -10,10 +10,11 @@ import sys
 import shutil
 import hashlib
 import time
+import argparse
 from datetime import datetime, timezone
 
 ROOT_DIR = os.path.dirname(os.path.abspath(__file__))
-DIST_DIR = os.path.join(ROOT_DIR, "dist")
+
 
 # Ensure UTF-8 stdout on Windows consoles
 try:
@@ -72,15 +73,17 @@ def minify_html(html_text):
     html = re.sub(r'\n\s*\n+', '\n', html)
     return html.strip()
 
-def build():
+def build(output_name="public"):
     start_time = time.time()
+    DIST_DIR = os.path.join(ROOT_DIR, output_name)
+
     print("=" * 70)
     print(" [BUILD] FASALMARG PRODUCTION BUILD PIPELINE")
-    print("         'From Farm to Fair Deal' -- Packaging for Production")
+    print(f"         Target Output: {output_name}/ -- Packaging for Production")
     print("=" * 70)
 
-    # 1. Clean and initialize dist directory
-    log("Cleaning target directory: dist/", "CLEAN")
+    # 1. Clean and initialize target directory
+    log(f"Cleaning target directory: {output_name}/", "CLEAN")
     if os.path.exists(DIST_DIR):
         shutil.rmtree(DIST_DIR)
     os.makedirs(DIST_DIR, exist_ok=True)
@@ -236,7 +239,26 @@ def build():
     for key in sorted(build_manifest["artifacts"].keys()):
         item = build_manifest["artifacts"][key]
         print(f"   * {key:<28} {item['formattedSize']:>9}  [hash: {item['sha256']}]")
-    print("=" * 70)
+    # Mirror to alternate directory (dist <-> public) for seamless multi-platform hosting
+    alt_name = "dist" if output_name == "public" else "public"
+    alt_dir = os.path.join(ROOT_DIR, alt_name)
+    try:
+        if os.path.exists(alt_dir):
+            shutil.rmtree(alt_dir)
+        shutil.copytree(DIST_DIR, alt_dir)
+        log(f"Mirrored build to {alt_name}/ for multi-platform compatibility.", "✓")
+    except Exception as e:
+        log(f"Mirroring note: {e}", "!")
+
+def main():
+    parser = argparse.ArgumentParser(description="FASALMARG Production Build Pipeline")
+    parser.add_argument(
+        "--output", "-o",
+        default="public",
+        help="Target output directory (default: public, also supports dist or all)"
+    )
+    args = parser.parse_args()
+    build(args.output)
 
 if __name__ == "__main__":
-    build()
+    main()
