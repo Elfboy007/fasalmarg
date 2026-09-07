@@ -496,16 +496,16 @@
         <!-- Portal Role Selector Tabs (4 Roles) -->
         <div class="login-tab-switcher">
           <button class="login-tab-btn active" id="tab-role-farmer" onclick="window.FasalmargApp.switchLoginRole('farmer')">
-            👨‍🌾 Farmer (किसान)
+            👨‍🌾 Farmer
           </button>
           <button class="login-tab-btn" id="tab-role-buyer" onclick="window.FasalmargApp.switchLoginRole('buyer')">
-            🏢 Buyer (खरीदार)
+            🏢 Buyer
           </button>
           <button class="login-tab-btn" id="tab-role-mandi" onclick="window.FasalmargApp.switchLoginRole('mandi')">
-            🏛️ Mandi (मंडी)
+            🏛️ Mandi
           </button>
           <button class="login-tab-btn" id="tab-role-fpo" onclick="window.FasalmargApp.switchLoginRole('fpo')">
-            🌾 FPO (एफपीओ)
+            🌾 FPO
           </button>
         </div>
 
@@ -530,7 +530,7 @@
               <span class="onboarding-step-badge">Step 1: Mobile Number</span>
               <h2 class="onboarding-step-title" style="justify-content: center;">
                 Farmer Mobile Number
-                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Welcome to Fasalmarg. Sign in with Google or enter your mobile number.')" title="Listen / सुनें">🔊</button>
+                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Welcome to Fasalmarg. Sign in with Google or enter your mobile number.')" title="Listen">🔊</button>
               </h2>
               <p class="onboarding-step-desc">
                 Log in to sell crops, check prices & access 4% KCC finance
@@ -583,7 +583,7 @@
               <span class="onboarding-step-badge">Step 2: OTP Verification</span>
               <h2 class="onboarding-step-title" style="justify-content: center;">
                 Enter 4-Digit Code
-                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Enter the 4 digit OTP code sent to your mobile.')" title="Listen / सुनें">🔊</button>
+                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Enter the 4 digit OTP code sent to your mobile.')" title="Listen">🔊</button>
               </h2>
               <p class="onboarding-step-desc">
                 SMS sent to <strong id="otp-sent-to-phone" style="color: var(--text-main);">+91 98224 51092</strong> 
@@ -625,7 +625,7 @@
               <span class="onboarding-step-badge">Step 3: Farmer Name</span>
               <h2 class="onboarding-step-title" style="justify-content: center;">
                 What is your name?
-                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Please enter your full name as per your land records.')" title="Listen / सुनें">🔊</button>
+                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Please enter your full name as per your land records.')" title="Listen">🔊</button>
               </h2>
               <p class="onboarding-step-desc">Enter your full name as shown on your 7/12 land record or Aadhaar.</p>
             </div>
@@ -645,7 +645,7 @@
               <span class="onboarding-step-badge">Step 4: State</span>
               <h2 class="onboarding-step-title" style="justify-content: center;">
                 Select Your State
-                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Select your state from the options.')" title="Listen / सुनें">🔊</button>
+                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Select your state from the options.')" title="Listen">🔊</button>
               </h2>
               <p class="onboarding-step-desc">Choose the state where your primary farm land is located.</p>
             </div>
@@ -653,33 +653,27 @@
               <div class="selectable-chip selected" onclick="window.FasalmargApp.selectOnboardingChip('state', this, 'Maharashtra')">
                 <span class="chip-icon">🌾</span>
                 <span class="chip-label">Maharashtra</span>
-                <span class="chip-sub">महाराष्ट्र</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="window.FasalmargApp.selectOnboardingChip('state', this, 'Gujarat')">
                 <span class="chip-icon">🌾</span>
                 <span class="chip-label">Gujarat</span>
-                <span class="chip-sub">ગુજરાત</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="window.FasalmargApp.selectOnboardingChip('state', this, 'Madhya Pradesh')">
                 <span class="chip-icon">🌾</span>
                 <span class="chip-label">Madhya Pradesh</span>
-                <span class="chip-sub">मध्य प्रदेश</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="window.FasalmargApp.selectOnboardingChip('state', this, 'Punjab')">
                 <span class="chip-icon">🌾</span>
                 <span class="chip-label">Punjab</span>
-                <span class="chip-sub">ਪੰਜਾਬ</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="window.FasalmargApp.selectOnboardingChip('state', this, 'Karnataka')">
                 <span class="chip-icon">🌾</span>
                 <span class="chip-label">Karnataka</span>
-                <span class="chip-sub">ಕರ್ನಾಟಕ</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="window.FasalmargApp.selectOnboardingChip('state', this, 'Uttar Pradesh')">
                 <span class="chip-icon">🌾</span>
                 <span class="chip-label">Uttar Pradesh</span>
-                <span class="chip-sub">उत्तर प्रदेश</span>
-              </div>
+                              </div>
             </div>
             <input type="hidden" id="onboard-farmer-state" value="Maharashtra">
             <div class="onboarding-nav-group">
@@ -694,7 +688,7 @@
               <span class="onboarding-step-badge">Step 5: District</span>
               <h2 class="onboarding-step-title" style="justify-content: center;">
                 Select Your District
-                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Choose your revenue district.')" title="Listen / सुनें">🔊</button>
+                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Choose your revenue district.')" title="Listen">🔊</button>
               </h2>
               <p class="onboarding-step-desc">Pick your district to connect nearby mandi prices and buyers.</p>
             </div>
@@ -702,33 +696,27 @@
               <div class="selectable-chip selected" onclick="window.FasalmargApp.selectOnboardingChip('district', this, 'Nashik')">
                 <span class="chip-icon">📍</span>
                 <span class="chip-label">Nashik</span>
-                <span class="chip-sub">नाशिक</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="window.FasalmargApp.selectOnboardingChip('district', this, 'Pune')">
                 <span class="chip-icon">📍</span>
                 <span class="chip-label">Pune</span>
-                <span class="chip-sub">पुणे</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="window.FasalmargApp.selectOnboardingChip('district', this, 'Nagpur')">
                 <span class="chip-icon">📍</span>
                 <span class="chip-label">Nagpur</span>
-                <span class="chip-sub">नागपूर</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="window.FasalmargApp.selectOnboardingChip('district', this, 'Ahmednagar')">
                 <span class="chip-icon">📍</span>
                 <span class="chip-label">Ahmednagar</span>
-                <span class="chip-sub">अहमदनगर</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="window.FasalmargApp.selectOnboardingChip('district', this, 'Solapur')">
                 <span class="chip-icon">📍</span>
                 <span class="chip-label">Solapur</span>
-                <span class="chip-sub">सोलापूर</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="window.FasalmargApp.selectOnboardingChip('district', this, 'Jalgaon')">
                 <span class="chip-icon">📍</span>
                 <span class="chip-label">Jalgaon</span>
-                <span class="chip-sub">जळगाव</span>
-              </div>
+                              </div>
             </div>
             <input type="hidden" id="onboard-farmer-district" value="Nashik">
             <div class="onboarding-nav-group">
@@ -743,7 +731,7 @@
               <span class="onboarding-step-badge">Step 6: Village</span>
               <h2 class="onboarding-step-title" style="justify-content: center;">
                 Enter Your Village
-                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Enter your village or gram panchayat name.')" title="Listen / सुनें">🔊</button>
+                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Enter your village or gram panchayat name.')" title="Listen">🔊</button>
               </h2>
               <p class="onboarding-step-desc">Allows farm-gate transport pickup and neighbor aggregation.</p>
             </div>
@@ -769,7 +757,7 @@
               <span class="onboarding-step-badge">Step 7: Farm Size</span>
               <h2 class="onboarding-step-title" style="justify-content: center;">
                 How big is your farm?
-                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Select your farm size in acres.')" title="Listen / सुनें">🔊</button>
+                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Select your farm size in acres.')" title="Listen">🔊</button>
               </h2>
               <p class="onboarding-step-desc">Used to calculate your 4% Kisan Credit Card loan eligibility.</p>
             </div>
@@ -811,7 +799,7 @@
               <span class="onboarding-step-badge">Step 8: Crops Grown</span>
               <h2 class="onboarding-step-title" style="justify-content: center;">
                 What crops do you grow?
-                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Tap all crops you grow or plan to harvest.')" title="Listen / सुनें">🔊</button>
+                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Tap all crops you grow or plan to harvest.')" title="Listen">🔊</button>
               </h2>
               <p class="onboarding-step-desc">Select all crops to receive matching buyer contracts & price alerts.</p>
             </div>
@@ -819,33 +807,27 @@
               <div class="selectable-chip selected" onclick="this.classList.toggle('selected')">
                 <span class="chip-icon">🍅</span>
                 <span class="chip-label">Tomato</span>
-                <span class="chip-sub">टमाटर / टोमॅटो</span>
-              </div>
+                              </div>
               <div class="selectable-chip selected" onclick="this.classList.toggle('selected')">
                 <span class="chip-icon">🧅</span>
                 <span class="chip-label">Onion</span>
-                <span class="chip-sub">प्याज / कांदा</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="this.classList.toggle('selected')">
                 <span class="chip-icon">🥔</span>
                 <span class="chip-label">Potato</span>
-                <span class="chip-sub">आलू / बटाटा</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="this.classList.toggle('selected')">
                 <span class="chip-icon">🌾</span>
                 <span class="chip-label">Wheat</span>
-                <span class="chip-sub">गेहूं / गहू</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="this.classList.toggle('selected')">
                 <span class="chip-icon">🌱</span>
                 <span class="chip-label">Soybean</span>
-                <span class="chip-sub">सोयाबीन</span>
-              </div>
+                              </div>
               <div class="selectable-chip" onclick="this.classList.toggle('selected')">
                 <span class="chip-icon">🍇</span>
                 <span class="chip-label">Grapes</span>
-                <span class="chip-sub">अंगूर / द्राक्षे</span>
-              </div>
+                              </div>
             </div>
             <div class="onboarding-nav-group">
               <button class="btn btn-secondary" onclick="window.FasalmargApp.goToOnboardingStep(7)">← Back</button>
@@ -859,7 +841,7 @@
               <span class="onboarding-step-badge">Step 9: Farmer KYC</span>
               <h2 class="onboarding-step-title" style="justify-content: center;">
                 Simple Farmer KYC
-                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Verify your identity with Aadhaar or land record.')" title="Listen / सुनें">🔊</button>
+                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Verify your identity with Aadhaar or land record.')" title="Listen">🔊</button>
               </h2>
               <p class="onboarding-step-desc">Required to verify farm ownership and unlock direct escrow payouts.</p>
             </div>
@@ -893,7 +875,7 @@
               </span>
               <h2 class="onboarding-step-title" style="justify-content: center; margin-top: 0.5rem;">
                 Namaste, <span id="onboard-summary-name">Ramesh Patel</span> 👋
-                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Congratulations! Your farmer profile is ready.')" title="Listen / सुनें">🔊</button>
+                <button class="audio-listen-btn" onclick="window.FasalmargApp.speakAudio('Congratulations! Your farmer profile is ready.')" title="Listen">🔊</button>
               </h2>
               <p class="onboarding-step-desc">Your farm is officially verified and listed on Fasalmarg.</p>
             </div>
@@ -1710,31 +1692,31 @@
             <label style="font-size: 0.85rem; font-weight: 700; color: var(--green-dark);">Select Commodity</label>
             <select class="form-control" id="kaggle-filter-commodity" onchange="window.FasalmargApp.filterKaggleDataset()">
               <option value="all">All Commodities (2,480)</option>
-              <option value="Tomato" selected>🍅 Tomato (टमाटर)</option>
-              <option value="Onion">🧅 Onion (प्याज / कांदा)</option>
-              <option value="Potato">🥔 Potato (आलू / बटाटा)</option>
-              <option value="Wheat">🌾 Wheat (गेहूं / गहू)</option>
-              <option value="Soybean">🌱 Soybean (सोयाबीन)</option>
-              <option value="Cotton">☁️ Cotton (कपास / कापूस)</option>
-              <option value="Grapes">🍇 Grapes (अंगूर / द्राक्षे)</option>
-              <option value="Mustard">🟡 Mustard (सरसों)</option>
-              <option value="Chana">🟤 Chana (चना)</option>
-              <option value="Maize">🌽 Maize (मक्का)</option>
+              <option value="Tomato" selected>🍅 Tomato</option>
+              <option value="Onion">🧅 Onion</option>
+              <option value="Potato">🥔 Potato</option>
+              <option value="Wheat">🌾 Wheat</option>
+              <option value="Soybean">🌱 Soybean</option>
+              <option value="Cotton">☁️ Cotton</option>
+              <option value="Grapes">🍇 Grapes</option>
+              <option value="Mustard">🟡 Mustard</option>
+              <option value="Chana">🟤 Chana</option>
+              <option value="Maize">🌽 Maize</option>
             </select>
           </div>
           <div class="form-group" style="margin: 0;">
             <label style="font-size: 0.85rem; font-weight: 700; color: var(--green-dark);">Select State</label>
             <select class="form-control" id="kaggle-filter-state" onchange="window.FasalmargApp.filterKaggleDataset()">
               <option value="all" selected>All States (Pan-India)</option>
-              <option value="Maharashtra">Maharashtra (महाराष्ट्र)</option>
-              <option value="Madhya Pradesh">Madhya Pradesh (मध्य प्रदेश)</option>
-              <option value="Gujarat">Gujarat (गुजरात)</option>
-              <option value="Punjab">Punjab (पंजाब)</option>
-              <option value="Rajasthan">Rajasthan (राजस्थान)</option>
-              <option value="Karnataka">Karnataka (कर्नाटक)</option>
-              <option value="Delhi">Delhi (दिल्ली)</option>
-              <option value="Uttar Pradesh">Uttar Pradesh (उत्तर प्रदेश)</option>
-              <option value="West Bengal">West Bengal (पश्चिम बंगाल)</option>
+              <option value="Maharashtra">Maharashtra</option>
+              <option value="Madhya Pradesh">Madhya Pradesh</option>
+              <option value="Gujarat">Gujarat</option>
+              <option value="Punjab">Punjab</option>
+              <option value="Rajasthan">Rajasthan</option>
+              <option value="Karnataka">Karnataka</option>
+              <option value="Delhi">Delhi</option>
+              <option value="Uttar Pradesh">Uttar Pradesh</option>
+              <option value="West Bengal">West Bengal</option>
             </select>
           </div>
           <div class="form-group" style="margin: 0;">
@@ -4061,12 +4043,12 @@
           <div class="form-group">
             <label>Crop Name</label>
             <select class="form-control" id="new-crop-name">
-              <option value="Tomato" selected>Tomato (टमाटर / टोमॅटो)</option>
-              <option value="Onion">Onion (प्याज / कांदा)</option>
-              <option value="Potato">Potato (आलू / बटाटा)</option>
-              <option value="Wheat">Wheat (गेहूं / गहू)</option>
-              <option value="Soybean">Soybean (सोयाबीन)</option>
-              <option value="Cotton">Cotton (कपास / कापूस)</option>
+              <option value="Tomato" selected>Tomato</option>
+              <option value="Onion">Onion</option>
+              <option value="Potato">Potato</option>
+              <option value="Wheat">Wheat</option>
+              <option value="Soybean">Soybean</option>
+              <option value="Cotton">Cotton</option>
             </select>
           </div>
           <div class="grid-2">
@@ -4289,7 +4271,7 @@
             👨‍🌾
           </div>
           <div>
-            <h3 style="font-size: 1.3rem; color: var(--green-dark);">Ramesh Patel (रमेश पटेल)</h3>
+            <h3 style="font-size: 1.3rem; color: var(--green-dark);">Ramesh Patel</h3>
             <div style="font-size: 0.85rem; color: var(--text-muted);">ID: FMR-MH-2024-8841 · Nashik, Maharashtra</div>
             <span class="badge badge-green">✓ Aadhaar & 7/12 Land Record KYC Verified</span>
           </div>

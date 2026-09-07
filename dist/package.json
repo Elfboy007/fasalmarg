@@ -4,9 +4,12 @@
   "description": "FASALMARG — A Unified Credit-to-Market Platform for Farmers. From Farm to Fair Deal.",
   "main": "index.html",
   "scripts": {
-    "build": "python build.py",
+    "build": "python build.py --output public",
+    "build:dist": "python build.py --output dist",
+    "build:all": "python build.py --output all",
     "dev": "python -m http.server 8080",
-    "start": "python -m http.server 8080",
+    "start": "python -m http.server 8080 --directory public",
+    "serve:public": "python -m http.server 8080 --directory public",
     "serve:dist": "python -m http.server 8080 --directory dist"
   },
   "keywords": [
