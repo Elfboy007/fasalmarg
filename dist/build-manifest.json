@@ -1,5 +1,5 @@
 {
-  "buildTimestamp": "2026-09-07T06:59:19.279662+00:00",
+  "buildTimestamp": "2026-09-07T07:09:14.970265+00:00",
   "platform": "FASALMARG Agricultural Platform",
   "version": "1.0.0",
   "artifacts": {
@@ -19,9 +19,9 @@
       "sha256": "996aa170b0a1"
     },
     "package.json": {
-      "sizeBytes": 825,
-      "formattedSize": "825.0 B",
-      "sha256": "d86dda0475c0"
+      "sizeBytes": 899,
+      "formattedSize": "899.0 B",
+      "sha256": "970ea171f47d"
     },
     "assets/hero-banner.jpg": {
       "sizeBytes": 1082417,
